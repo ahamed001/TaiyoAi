@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= 600);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     // Close the sidebar when the screen size is less than 600px
     const handleResize = () => {
         if (window.innerWidth < 600) {
             setIsSidebarOpen(false);
         } else {
-            setIsSidebarOpen(true); 
+            setIsSidebarOpen(true);
         }
     };
 
@@ -31,11 +31,12 @@ const Sidebar = () => {
 
             {/* Sidebar */}
             <aside
-                className={`fixed left-0 top-0 h-full bg-blue-800 text-white p-4 z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} w-[20vw] transition-transform duration-300 ease-in-out`}
+                className={`fixed left-0 top-0 h-full bg-blue-800 text-white p-4 z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} w-[25vw] transition-transform duration-300 ease-in-out`}
+                style={{ width: window.innerWidth < 600 ? '70%' : '25vw' }}
             >
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold">Sidebar</h2>
-                    {window.innerWidth < 600 && ( 
+                    {window.innerWidth < 600 && (
                         <button
                             className="text-white p-2 rounded hover:bg-blue-700 focus:outline-none"
                             onClick={() => setIsSidebarOpen(false)}

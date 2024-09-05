@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import { addContact } from '../store/contactSlice';
 
 type ContactFormProps = {
-    onAddContact: (contact: { name: string; email: string }) => void;
-  };  
+  onAddContact: (contact: { name: string; email: string }) => void;
+};
 
-  const ContactForm: React.FC<ContactFormProps> = ({ onAddContact }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ onAddContact }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const dispatch = useDispatch();
