@@ -3,13 +3,6 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import { Contact } from '../store/contactSlice';
 
-// Define the type for a contact
-// type Contact = {
-//     id: number;
-//     name: string;
-//     email: string;
-// };
-
 const Main = () => {
     const [contacts, setContacts] = useState<Contact[]>([]);
 
