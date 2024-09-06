@@ -10,7 +10,7 @@ interface ContactListProps {
 
 const ContactList: React.FC<ContactListProps> = ({ contacts, onDeleteContact, onEditContact }) => {
   return (
-    <div>
+    <div className=' flex flex-col'>
       {contacts.map(contact => (
         <ContactItem
           key={contact.id}

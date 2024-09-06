@@ -11,6 +11,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onAddContact }) => {
   const [email, setEmail] = useState('');
   const dispatch = useDispatch();
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAddContact({ name, email });
@@ -41,7 +42,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onAddContact }) => {
           required
         />
       </div>
-      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded mt-3 hover:bg-blue-600 hover:ease-in-out">
         Add Contact
       </button>
     </form>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-    // Close the sidebar when the screen size is less than 600px
+    // Function to handle sidebar visibility based on screen size
     const handleResize = () => {
         if (window.innerWidth < 600) {
             setIsSidebarOpen(false);
